@@ -1,0 +1,350 @@
+/* Grill Master.css - Improved Responsiveness */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Header - Improved for Mobile */
+header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: clamp(1.5rem, 4vw, 2rem); /* Responsive font size */
+    font-weight: bold;
+    color: #ff6b35;
+    text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+    margin: 0.5rem 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+    font-size: clamp(0.9rem, 2vw, 1rem); /* Responsive font size */
+    padding: 0.5rem;
+}
+
+.nav-links a:hover {
+    color: #ff6b35;
+}
+
+/* Hero Section - Improved for Mobile */
+.hero {
+    height: 100vh;
+    min-height: 500px; /* Prevent content from being too squished */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/><circle fill="%23ff6b35" cx="600" cy="300" r="100" opacity="0.3"/><rect fill="%23444" x="500" y="250" width="200" height="100" rx="10"/></svg>');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+    margin-top: 60px; /* Account for fixed header */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem); /* Responsive font size */
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    animation: fadeInUp 1s ease;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font size */
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* Responsive font size */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    animation: fadeInUp 1s ease 0.4s both;
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+    min-width: 180px; /* Prevent button from becoming too small */
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.6);
+}
+
+/* Grilled Food Section - Improved for Mobile */
+.grilled-section {
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Responsive font size */
+    margin-bottom: 2rem;
+    color: #333;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.section-title::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.food-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 0 auto;
+    max-width: 350px;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.food-image {
+    height: 180px;
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.food-content {
+    padding: 1.2rem;
+}
+
+.food-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.food-description {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.food-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff6b35;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Cart - Improved for Mobile */
+.cart {
+    position: fixed;
+    top: 70px;
+    right: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    min-width: 250px;
+    max-width: 90%;
+    z-index: 999;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.cart.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.cart-header {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #ff6b35;
+    padding-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    font-size: 0.9rem;
+}
+
+.cart-total {
+    font-weight: bold;
+    border-top: 2px solid #ff6b35;
+    padding-top: 10px;
+    margin-top: 15px;
+    color: #ff6b35;
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Improved Responsive Breakpoints */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+    
+    .nav-links {
+        margin-top: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .hero {
+        margin-top: 80px; /* More space for header */
+        padding: 0 1rem;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .food-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    
+    .food-card {
+        max-width: 100%;
+    }
+    
+    .cart {
+        right: 10px;
+        left: 10px;
+        width: auto;
+        top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-button {
+        padding: 10px 20px;
+        min-width: 160px;
+    }
+    
+    .food-image {
+        height: 150px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}

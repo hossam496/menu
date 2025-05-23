@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Grill Master.css">
+    <title>Grill Master - Premium Grilled Foods</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🔥 Grill Master</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#grilled">Grilled Food</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Premium Grilled Delights</h1>
+            <p>Experience the perfect blend of flavors with our expertly grilled specialties</p>
+            <a href="#grilled" class="cta-button">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <section class="grilled-section" id="grilled">
+        <div class="container">
+            <h2 class="section-title">🔥 Grilled Food Collection</h2>
+            <div class="food-grid" id="food-grid">
+                <!-- Food items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <div class="cart" id="cart">
+        <div class="cart-header">🛒 Your Cart</div>
+        <div id="cart-items"></div>
+        <div class="cart-total" id="cart-total">Total: $0.00</div>
+    </div>
+
+    <script src="js/Grill Master.js"></script>
+</body>
+</html>

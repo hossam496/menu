@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Sweet Delights.css">
+    <title>Sweet Delights - Western & Eastern Sweets</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🍰 Sweet Delights</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#western">Western Sweets</a></li>
+                <li><a href="#eastern">Eastern Sweets</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Sweet Delights</h1>
+            <p>Indulge in the finest Western & Eastern desserts from around the world</p>
+            <a href="#western" class="cta-button">Explore Our Sweets</a>
+        </div>
+    </section>
+
+    <section class="section western-section" id="western">
+        <div class="container">
+            <h2 class="section-title western-title fade-in">🧁 Western Sweets</h2>
+            <p class="section-subtitle fade-in">Classic European & American desserts that delight the senses</p>
+            <div class="sweets-grid" id="western-grid">
+                <!-- Western sweets will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section eastern-section" id="eastern">
+        <div class="container">
+            <h2 class="section-title eastern-title fade-in">🥮 Eastern Sweets</h2>
+            <p class="section-subtitle fade-in">Traditional Asian & Middle Eastern delicacies with exotic flavors</p>
+            <div class="sweets-grid" id="eastern-grid">
+                <!-- Eastern sweets will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <div class="cart" id="cart">
+        <div class="cart-header">🛒 Your Sweet Cart</div>
+        <div id="cart-items"></div>
+        <div class="cart-total" id="cart-total">Total: $0.00</div>
+    </div>
+
+    <script src="js/Sweet Delights.js"></script>
+</body>
+</html>
